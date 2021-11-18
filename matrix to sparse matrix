@@ -1,0 +1,24 @@
+#matrix to sparse matrix-------------------------------
+
+n=int(input("number of rows:"))
+m=int(input("number of columns:"))
+matrix=[]
+for i in range(n):
+  x=[]
+  for j in range(m):
+        num=int(input("enter:"))
+        x.append(num)
+  matrix.append(x)
+print(matrix)
+
+
+smatrix=[]
+for i in range(len(matrix)):
+  for j in range(len(matrix[0])):
+    if matrix[i][j] != 0:
+      y=[]
+      y.append(i)
+      y.append(j)
+      y.append(matrix[i][j])
+      smatrix.append(y)
+print(smatrix)
